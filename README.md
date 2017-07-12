@@ -2,7 +2,7 @@
 
 I decided to set up the project using Angular, why? just as a test case to show you my development skills, gulp, bower and npm, didn't wanted to complicated too much things using webpack, but it's certainly a good option too, basically what gulp our task manager and allow us to generate a final minify build of the project.
 
-###Folder Structure
+### Folder Structure
 
 * gulp: this folder contains all the gulp tasks for the project, I want to said here that I didn't write those lines and they are from a public [YeoMan Generator][1], I do know how to modify it but I didn't wanted to reinvent the wheel.
 
