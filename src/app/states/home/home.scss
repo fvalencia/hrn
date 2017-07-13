@@ -1,3 +1,183 @@
-.empty{
-	color: red;
+@import "../../commons/variables/variables";
+
+.main-banner{
+	background-image: url(/assets/images/bg/desktop-empty.jpg);
+	width: 100%;
+	height: 52vw;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	.right{
+		position: absolute;
+		right: -10%;
+		bottom: 0;
+		width: 25vw;
+		opacity: 0;
+		transition: 1s;
+		&.visible{
+			opacity: 1;
+			right: 0;
+		}
+		img{
+			width: 100%;
+		}
+	}
+	.left{
+		position: absolute;
+		left: -10%;
+		bottom: 0;
+		width: 25vw;
+		opacity: 0;
+		transition: 1s;
+		&.visible{
+			opacity: 1;
+			left: 0;
+		}
+		img{
+			width: 100%;
+		}
+	}
+	img.fade{
+		position: absolute;
+		bottom: -40px;
+		z-index: 12;
+		width: 100%;
+	}
+
+	.main-logo{
+		font-family: 'Playfair-Regular';
+		position: absolute;
+		left: 50%;
+		top: 35%;
+		transform: translate(-50%, -35%);
+		color: white;
+		display: flex;
+		flex-direction: column;
+		line-height: 1.1;
+		.little{
+			font-size: 1.8vw;
+			position: absolute;
+			left: 18%;
+    	top: -12px;
+		}
+		.big{
+			font-size: 5vw;
+		}
+		.medium{
+			font-size: 1.8vw;
+			text-align: right;
+		}
+	}
+
+	.feauture-container{
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		bottom: 3vw;
+		z-index: 15;
+		.invitation{
+			h2{
+				color: white;
+				text-transform: uppercase;
+				font-size: 2.5vw;
+				font-weight: bold;
+				margin: 10px 0;
+			}
+		}
+		.row{
+			margin-top: 2vw;
+			display: flex;
+	    flex-direction: row;
+	    justify-content: space-around;
+	    align-items: center;
+			.branding{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				a{
+					width: 8vw;
+					display: inline-flex;
+					margin: 0 10px;
+					&.sap{
+						width: 12vw;
+					}
+					img{
+						width: 100%;
+					}
+				}
+			}
+			.name{
+				color: white;
+				text-align: center;
+				bottom: 4vw;
+				z-index: 12;
+				transition: 0.5s;
+				transition-delay: 1s;
+				opacity: 0;
+				&.visible{
+					opacity: 1;
+				}
+				h5{
+					font-size: 1.2vw;
+				}
+				h2{
+					margin-top: 5px;
+					font-size: 2vw;
+					font-weight: bold;
+				}
+			}
+			@media screen and (max-width: $medium) {
+				 margin-top: 0vw;
+			}
+		}
+
+		@media screen and (max-width: $medium) {
+		   bottom: 0vw;
+		}
+
+	}
+
+}
+
+/* General Clases */
+
+.feature-button{
+	width: 160px;
+	color: white;
+	background-color: #99cc00;
+	text-transform: uppercase;
+	font-weight: 600;
+	border: none;
+	height: 40px;
+	transition: 0.5s;
+	font-size: 14px;
+	&:hover{
+		background-color: white;
+		color: #99cc00;
+	}
+	@media screen and (max-width: $medium) {
+
+	}
+}
+
+.invert-button{
+	width: 160px;
+	color: #99cc00;
+	background-color: white;
+	text-transform: uppercase;
+	font-weight: 600;
+	border: none;
+	height: 40px;
+	transition: 0.5s;
+	font-size: 14px;
+	&:hover{
+		background-color: #99cc00;
+		color: white;
+	}
+}
+
+.margin-right{
+	margin-right: 10px;
 }
