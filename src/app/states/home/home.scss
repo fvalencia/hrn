@@ -56,16 +56,16 @@
 		flex-direction: column;
 		line-height: 1.1;
 		.little{
-			font-size: 1.8vw;
+			font-size: 2.2vw;
 			position: absolute;
 			left: 18%;
     	top: -12px;
 		}
 		.big{
-			font-size: 5vw;
+			font-size: 6vw;
 		}
 		.medium{
-			font-size: 1.8vw;
+			font-size: 2.1vw;
 			text-align: right;
 		}
 	}
@@ -80,9 +80,12 @@
 			h2{
 				color: white;
 				text-transform: uppercase;
-				font-size: 2.5vw;
+				font-size: 1.8vw;
 				font-weight: bold;
 				margin: 10px 0;
+				@media screen and (max-width: $largemid) {
+					font-size: 30px;
+				}
 			}
 		}
 		.row{
@@ -144,7 +147,9 @@
 /* General Clases */
 
 .feature-button{
-	width: 160px;
+	width: 100%;
+	max-width: 8vw;
+	min-width: 160px;
 	color: white;
 	background-color: #99cc00;
 	text-transform: uppercase;
@@ -157,13 +162,19 @@
 		background-color: white;
 		color: #99cc00;
 	}
+	@media screen and (min-width: $large) {
+		font-size: 0.8vw;
+    max-width: 10vw;
+	}
 	@media screen and (max-width: $medium) {
-
+		height: 30px;
 	}
 }
 
 .invert-button{
-	width: 160px;
+	width: 100%;
+	max-width: 8vw;
+	min-width: 160px;
 	color: #99cc00;
 	background-color: white;
 	text-transform: uppercase;
@@ -175,6 +186,13 @@
 	&:hover{
 		background-color: #99cc00;
 		color: white;
+	}
+	@media screen and (min-width: $large) {
+		font-size: 0.8vw;
+		max-width: 10vw;
+	}
+	@media screen and (max-width: $medium) {
+		height: 30px;
 	}
 }
 

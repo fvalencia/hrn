@@ -1,3 +1,5 @@
+@import "../../commons/variables/variables";
+
 .nav-bar{
   background-color: black;
   color: white;
@@ -27,6 +29,9 @@
       &.tickets{
         position: absolute;
         top: -10px;
+        @media screen and (max-width: $medium) {
+          top: -6px;
+        }
       }
       a{
         text-decoration: none;
