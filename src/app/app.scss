@@ -64,6 +64,12 @@ button{
   }
 }
 
+*{
+  &:focus{
+    outline: none;
+  }
+}
+
 /* App Css */
 
 html {

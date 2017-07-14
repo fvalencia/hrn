@@ -38,7 +38,7 @@
 			width: 100%;
 		}
 	}
-	img.fade{
+	.fade{
 		position: absolute;
 		bottom: -40px;
 		z-index: 12;
@@ -54,7 +54,7 @@
 		color: white;
 		display: flex;
 		flex-direction: column;
-		line-height: 1.1;
+		line-height: 1;
 		.little{
 			font-size: 2.2vw;
 			position: absolute;
@@ -68,6 +68,35 @@
 			font-size: 2.1vw;
 			text-align: right;
 		}
+		@media screen and (max-width: $medium) {
+			top: 30%;
+			transform: translate(-50%, -30%);
+			.little{
+				 font-size: 3vw;
+			 }
+			 .big{
+				 font-size: 8vw;
+			 }
+			 .medium{
+				 font-size: 3vw;
+				 text-align: right;
+			 }
+		}
+		@media screen and (max-width: $mobil) {
+			top: 15%;
+			transform: translate(-50%, -15%);
+			.little{
+				 font-size: 5vw;
+			 }
+			 .big{
+				 font-size: 12vw;
+			 }
+			 .medium{
+				 font-size: 4vw;
+				 text-align: right;
+			 }
+		}
+
 	}
 
 	.feauture-container{
@@ -86,6 +115,35 @@
 				@media screen and (max-width: $largemid) {
 					font-size: 30px;
 				}
+				@media screen and (max-width: $tablet) {
+					 font-size: 4vw;
+				}
+				@media screen and (max-width: $mobil) {
+					 font-size: 7vw;
+				}
+			}
+			.buttons{
+				@media screen and (max-width: $mobil) {
+					 display: flex;
+					 flex-direction: column;
+					 align-items: center;
+					 justify-content: center;
+					 .invert-button{
+						 margin-bottom: 20px;
+						 &.margin-right{
+							 margin-right: 0px;
+						 }
+				 	 }
+					 button{
+						 height: 40px;
+					 }
+				}
+			}
+			@media screen and (max-width: $tablet) {
+				 margin-bottom: 3vw;
+			}
+			@media screen and (max-width: $mobil) {
+				margin-bottom: 6vw;
 			}
 		}
 		.row{
@@ -105,10 +163,37 @@
 					margin: 0 10px;
 					&.sap{
 						width: 12vw;
+						@media screen and (max-width: $tablet) {
+							width: 8vw;
+						}
 					}
 					img{
 						width: 100%;
 					}
+					@media screen and (max-width: $tablet) {
+						flex-basis: 19vw;
+						display: initial;
+						margin: 10px 30px;
+					}
+					@media screen and (max-width: $mobil) {
+						flex-basis: 36vw;
+						margin: 14px;
+					}
+					@media screen and (max-width: $mobilm) {
+						flex-basis: 30vw;
+					}
+					@media screen and (max-width: $mobils) {
+						margin: 12px;
+					}
+				}
+				@media screen and (max-width: $tablet) {
+					flex-wrap: wrap;
+					margin-bottom: 10px;
+					width: 100%;
+				}
+				@media screen and (max-width: $mobil) {
+					justify-content: space-between;
+					padding: 0px 20px;
 				}
 			}
 			.name{
@@ -130,6 +215,33 @@
 					font-size: 2vw;
 					font-weight: bold;
 				}
+				@media screen and (max-width: $tablet) {
+					position: absolute;
+					top: 12vw;
+					&.ken{
+						right: 8vw;
+					}
+					&.karren{
+						left: 5vw;
+					}
+				}
+				@media screen and (max-width: $mobil) {
+					top: 45%;
+					h5{
+						font-size: 3.5vw;
+					}
+					h2{
+						font-size: 4.5vw;
+					}
+					&.ken{
+						right: 4vw;
+						text-align: right;
+					}
+					&.karren{
+						left: 4vw;
+						text-align: left;
+					}
+				}
 			}
 			@media screen and (max-width: $medium) {
 				 margin-top: 0vw;
@@ -139,10 +251,281 @@
 		@media screen and (max-width: $medium) {
 		   bottom: 0vw;
 		}
+		@media screen and (max-width: $tablet) {
+			bottom: 0;
+			top: 0;
+			height: 100%;
+			display: flex;
+	    flex-direction: column;
+	    justify-content: flex-end;
+		}
+	}
 
+	@media screen and (max-width: $tablet) {
+		background-image: url(/assets/images/bg/tablet.jpg);
+		height: 80vw;
+		.fade, .left, .right{
+			display: none;
+		}
+	}
+	@media screen and (max-width: $mobil) {
+		background-image: url(/assets/images/bg/mobile.jpg);
+		height: 200vw;
+	}
+
+	@media screen and (max-width: $mobils) {
+		height: 220vw;
 	}
 
 }
+
+/* Future of Work */
+
+.future-of-work{
+	.slider{
+		padding: 20px;
+		padding-top: 80px;
+		display: flex;
+		justify-content: center;
+		justify-content: center;
+		.slide-box{
+			align-items: center;
+	    justify-content: center;
+	    display: flex;
+	    flex-direction: column-reverse;
+			position: relative;
+			width: 5vw;
+			.popup{
+				width: 180px;
+				height: 40px;
+				background-color: #eee;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 22px;
+				position: relative;
+				transition: 0.6s;
+				transform: rotateY(90deg) translate(0,-160%);
+				position: absolute;
+				color: #eee;
+				&:after{
+					content: ' ';
+					background-image: url(/assets/icons/arrow.svg);
+					position: absolute;
+					width: 30px;
+					height: 20px;
+					top: 100%;
+					left: 50%;
+					transform: translate(-50%);
+				}
+			}
+			.icon{
+				display: inline-block;
+				margin: 0 auto;
+				transition: 0.5s;
+				cursor: pointer;
+				svg{
+					width: 35px;
+					height: 35px;
+					fill: #bbb;
+					transition: 0.5s;
+				}
+				&:hover, &.active{
+					transform: scale(1.1);
+					svg.green{
+						fill: #99CC00;
+					}
+					svg.blue{
+						fill: #18A7E0;
+					}
+					svg.orange{
+						fill: #BB6E3D;
+					}
+					svg.light-green{
+						fill: #57B1B8;
+					}
+					svg.purple{
+						fill: #885EA3;
+					}
+					& + .popup{
+						transform:rotateY(0deg) translate(0,-160%);
+						&.green{
+							color: #99CC00;
+						}
+						&.blue{
+							color: #18A7E0;
+						}
+						&.orange{
+							color: #BB6E3D;
+						}
+						&.light-green{
+							color: #57B1B8;
+						}
+						&.purple{
+							color: #885EA3;
+						}
+					}
+				}
+			}
+		}
+
+		/* This time I'm creating the media queries for the whole elemennt isntead of each one, either same result. */
+
+		@media screen and (min-width: $large) {
+			padding-top: 5vw;
+			.slide-box{
+				 width: 4.5vw;
+				.popup{
+					width: 12vw;
+					height: 2.5vw;
+					font-size: 0.8vw;
+					transform: rotateY(90deg) translate(0,-140%);
+				}
+				.icon{
+					svg{
+						width: 2vw;
+						height: 2vw;
+					}
+					&:hover, &.active{
+						& + .popup{
+							transform:rotateY(0deg) translate(0,-140%);
+					  }
+				  }
+			  }
+		  }
+		}
+		@media screen and (max-width: $medium) {
+			padding-top: 9vw;
+			.slide-box{
+				 width: 6vw;
+				 .popup{
+					 font-size: 1.4vw;
+				 }
+				 .icon{
+	 				svg{
+	 					width: 3vw;
+	 					height: 3vw;
+	 				}
+	 			}
+			}
+		}
+		@media screen and (max-width: $tablet) {
+			display: none;
+		}
+	}
+
+	.information-slider{
+		margin: 40px 0;
+		width: 100%;
+		overflow: hidden;
+		.card{
+			margin: 0 auto;
+			width: 100%;
+			max-width: 760px;
+			text-align: center;
+			transition: 0.5s;
+			&.out{
+				opacity: 0;
+				transform: translate(50%);
+			}
+			&.in{
+				opacity: 0;
+				transform: translate(-50%);
+			}
+			.buttons{
+				margin-top: 50px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				button{
+					max-width: 14vw;
+					min-width: 200px;
+				}
+			}
+		}
+		@media screen and (min-width: $large) {
+			.card{
+				max-width: 50vw;
+		  }
+		}
+		@media screen and (min-width: $largemid) {
+			.card{
+				.buttons{
+					button{
+						max-width: 10vw;
+						height: 2vw;
+					}
+				}
+			}
+		}
+		@media screen and (max-width: $tablet) {
+			.card{
+				max-width: inherit;
+				.invert-button{
+					border: 1px solid #99cc00;
+				}
+			}
+		}
+		@media screen and (max-width: $mobil) {
+			.card{
+				.buttons{
+					flex-direction: column;
+					button{
+						margin-bottom: 20px;
+						&.margin-right{
+							margin-right: 0px;
+						}
+					}
+				}
+			}
+		}
+  }
+}
+
+.download-app{
+	background-image: url(/assets/images/bg/desktop-download.jpg);
+	background-size: cover;
+	padding: 50px 0;
+  padding-bottom: 20px;
+	padding-left: 20px;
+	.logo{
+		width: 90%;
+		margin-bottom: 50px;
+	}
+	.logo-phone{
+		max-width: 240px;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.logo-box{
+		img{
+			width: 100%;
+			max-width: 130px;
+			margin: 0 15px;
+			@media screen and (min-width: $large) {
+				max-width: 8vw;
+			}
+		}
+	}
+	@media screen and (max-width: $tablet) {
+		padding-left: 0px;
+		.normal-text{
+			max-width: 480px;
+		}
+		.logo{
+			width: 60vw;
+		}
+	}
+	@media screen and (max-width: $mobil) {
+		.logo{
+			width: 90vw;
+		}
+		.logo-phone{
+			width: 60%;
+		}
+	}
+}
+
 
 /* General Clases */
 
@@ -167,7 +550,7 @@
     max-width: 10vw;
 	}
 	@media screen and (max-width: $medium) {
-		height: 30px;
+		height: 38px;
 	}
 }
 
@@ -192,7 +575,94 @@
 		max-width: 10vw;
 	}
 	@media screen and (max-width: $medium) {
-		height: 30px;
+		height: 38px;
+	}
+}
+
+.mid-header{
+	font-size: 30px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	font-weight: bold;
+	&.green{
+		color: #99CC00;
+	}
+	&.blue{
+		color: #18A7E0;
+	}
+	&.orange{
+		color: #BB6E3D;
+	}
+	&.light-green{
+		color: #57B1B8;
+	}
+	&.purple{
+		color: #885EA3;
+	}
+	@media screen and (min-width: $large) {
+		font-size: 1.6vw;
+	}
+	@media screen and (max-width: $mobil) {
+		font-size: 22px;
+	}
+}
+
+.normal-text{
+	line-height: 2;
+	color: #666;
+	@media screen and (min-width: $large) {
+		font-size: 0.8vw;
+	}
+	@media screen and (max-width: $tablet) {
+		padding: 0 15px;
+	}
+	@media screen and (max-width: $mobil) {
+		line-height: 1.5;
+	}
+}
+
+.row{
+	display: flex;
+	flex-direction: row;
+	.column{
+		flex:1;
+	}
+	&.row-tablet{
+		@media screen and (max-width: $tablet) {
+			flex-direction: column;
+		}
+	}
+}
+
+.container-box{
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+	@media screen and (min-width: $large) {
+		max-width: 60vw;
+	}
+}
+
+.flex-center{
+	align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.center{
+	text-align: center;
+}
+
+.mobile{
+	display: none;
+}
+@media screen and (max-width: $tablet) {
+	.mobile{
+		display: inherit;
+	}
+	.tablet{
+		display: none;
 	}
 }
 
