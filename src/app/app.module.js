@@ -2,5 +2,5 @@
   'use strict';
 
   angular
-    .module('HRN', ['ngAnimate', 'ngSanitize', 'ui.router', 'ngMaterial']);
+    .module('HRN', ['ngAnimate', 'ngSanitize', 'ui.router']);
 })();

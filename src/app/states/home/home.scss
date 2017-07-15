@@ -480,6 +480,10 @@
 			}
 		}
   }
+	@media screen and (min-width: $large) {
+		margin-bottom: 3vw;
+		margin-top: 1.5vw;
+	}
 }
 
 .download-app{
@@ -522,6 +526,279 @@
 		}
 		.logo-phone{
 			width: 60%;
+		}
+	}
+	@media screen and (min-width: $large) {
+		padding: 4vw 0;
+		padding-bottom: 2vw;
+	}
+}
+
+.who-arrends{
+	background-color: black;
+	padding: 50px 0;
+	.grid-layout{
+		/* I'm using this time inline-block, could be done with flex but I wanted to show another technique */
+		text-align: center;
+    width: 80vw;
+    margin: 50px auto;
+		.image-box{
+			width: calc((100vw - 22vw) / 5);
+			position: relative;
+			overflow: hidden;
+			display: inline-block;
+			backface-visibility: hidden;
+			.person{
+				width: 100%;
+			}
+			.overlay{
+				position: absolute;
+				transform: translate(-100%);
+				width: 100%;
+				height: 100%;
+				transition: 0.5s;
+				background-color: #99cc00;
+				opacity: 0;
+				top: 0;
+				z-index: 2;
+				text-align: left;
+				.wrapper{
+					padding: 15px;
+					h2{
+						font-weight: bold;
+					}
+					h5{
+						font-size: 0.8vw;
+						margin: 5px 0;
+					}
+					p{
+						margin-top: 10px;
+						font-size: 0.8vw;
+					}
+					@media screen and (min-width: $large) {
+						h2{
+							font-size: 1vw;
+						}
+						h5{
+							margin: 0.4vw 0;
+						}
+					}
+					@media screen and (max-width: $medium) {
+						h2{
+							font-size: 1.5vw;
+						}
+						h5, p{
+							font-size: 1.2vw;
+						}
+					}
+					@media screen and (max-width: $mobil) {
+						padding: 10px;
+						h2{
+							font-size: 16px;
+						}
+						h5, p{
+							font-size: 12px;
+						}
+					}
+					@media screen and (max-width: $mobilm) {
+						h2{
+							font-size: 12px;
+						}
+						h5, p{
+							font-size: 10px;
+						}
+					}
+					@media screen and (max-width: $mobils) {
+						h2{
+							font-size: 10px;
+						}
+						h5, p{
+							font-size: 8px;
+						}
+					}
+				}
+				.social{
+					position: absolute;
+					bottom: 0;
+					bottom: 1vw;
+					left: 1vw;
+					a{
+						margin: 0 5px;
+						color: white;
+						text-decoration: none;
+						@media screen and (min-width: $large) {
+							font-size: 1vw;
+						}
+						@media screen and (max-width: $medium) {
+							font-size: 1.5vw;
+						}
+						@media screen and (max-width: $mobil) {
+							font-size: 16px;
+						}
+						@media screen and (max-width: $mobilm) {
+							font-size: 14px;
+						}
+						@media screen and (max-width: $mobils) {
+							font-size: 12px;
+						}
+					}
+					@media screen and (max-width: $mobil) {
+						width: 100%;
+						left: 0px;
+						text-align: center;
+					}
+				}
+			}
+			.name-box{
+				position: absolute;
+				width: 100%;
+				background-color: rgba(0, 0, 0, 0.5);
+				bottom: 0;
+				text-align: center;
+				padding: 10px 0;
+				h2{
+					font-weight: bold;
+				}
+				h4{
+					font-size: 11px;
+				}
+				@media screen and (min-width: $large) {
+					padding: 0.8vw 0;
+					h2{
+						font-size: 1vw;
+					}
+					h4{
+						font-size: 0.7vw;
+					}
+				}
+				@media screen and (max-width: $medium) {
+					h2{
+						font-size: 1.5vw;
+					}
+					h4{
+						font-size: 1vw;
+					}
+				}
+				@media screen and (max-width: $mobil) {
+					h2{
+						font-size: 16px;
+					}
+					h4{
+						font-size: 12px;
+					}
+				}
+				@media screen and (max-width: $mobilm) {
+					h2{
+						font-size: 12px;
+					}
+					h4{
+						font-size: 10px;
+					}
+				}
+				@media screen and (max-width: $mobils) {
+					h2{
+						font-size: 10px;
+					}
+					h4{
+						font-size: 8px;
+					}
+				}
+			}
+			&:hover{
+				.overlay{
+					transform: translate(0);
+					opacity: 1;
+				}
+			}
+			@media screen and (max-width: $medium) {
+				width: calc((100vw - 10vw) / 4);
+			}
+			@media screen and (max-width: $mobil) {
+				width: calc((100vw - 5vw) / 2);
+			}
+		}
+		@media screen and (max-width: $medium) {
+			width: 100vw;
+		}
+	}
+	.subscribe{
+		h2{
+			font-size: 30px;
+			margin-top: 60px;
+			margin-bottom: 30px;
+		}
+		p{
+			max-width: 760px;
+			margin: 0 auto;
+		}
+		.form{
+			display: flex;
+			justify-content: center;
+			input{
+				height: 40px;
+				font-size: 14px;
+				border: 0;
+				line-height: 1;
+				padding: 0;
+				padding-left: 5px;
+				margin-right: 20px;
+				width: 180px;
+			}
+		}
+		@media screen and (min-width: $large) {
+			h2{
+				font-size: 1.7vw;
+				margin-top: 2vw;
+				margin-bottom: 1.5vw;
+			}
+			p{
+				font-size: 0.8vw;
+				max-width: 50vw;
+			}
+			.form{
+				input{
+					width: 8vw;
+					font-size: 0.6vw;
+				}
+			}
+		}
+		@media screen and (max-width: $tablet) {
+			h2{
+				font-size: 24px;
+			}
+			p{
+				font-size: 12px;
+				max-width: 60vw;
+			}
+			.form{
+				input{
+					width: 180px;
+				}
+			}
+		}
+		@media screen and (max-width: $mobil) {
+			h2{
+				font-size: 22px;
+			}
+			p{
+				max-width: 90vw;
+			}
+			.form{
+				flex-direction: column;
+				align-items: center;
+				input{
+					width: 155px;
+					height: 38px;
+					margin-right: 0px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+	@media screen and (min-width: $large) {
+		padding: 4vw;
+		.grid-layout{
+			 margin: 3vw auto;
 		}
 	}
 }
@@ -584,21 +861,6 @@
 	text-transform: uppercase;
 	margin-bottom: 20px;
 	font-weight: bold;
-	&.green{
-		color: #99CC00;
-	}
-	&.blue{
-		color: #18A7E0;
-	}
-	&.orange{
-		color: #BB6E3D;
-	}
-	&.light-green{
-		color: #57B1B8;
-	}
-	&.purple{
-		color: #885EA3;
-	}
 	@media screen and (min-width: $large) {
 		font-size: 1.6vw;
 	}
@@ -621,6 +883,25 @@
 	}
 }
 
+.green{
+	color: #99CC00;
+}
+.blue{
+	color: #18A7E0;
+}
+.orange{
+	color: #BB6E3D;
+}
+.light-green{
+	color: #57B1B8;
+}
+.purple{
+	color: #885EA3;
+}
+.white{
+	color: white;
+}
+
 .row{
 	display: flex;
 	flex-direction: row;
@@ -640,6 +921,15 @@
 	margin: 0 auto;
 	@media screen and (min-width: $large) {
 		max-width: 60vw;
+	}
+}
+
+.container-box-little{
+	width: 100%;
+	max-width: 760px;
+	margin: 0 auto;
+	@media screen and (min-width: $large) {
+		max-width: 40vw;
 	}
 }
 
