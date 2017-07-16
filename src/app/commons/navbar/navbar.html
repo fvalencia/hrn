@@ -1,11 +1,37 @@
-<nav class="nav-bar">
-    <ul>
-      <li><a href="#">about</a></li>
-      <li><a href="#">our shows</a></li>
-      <li><a href="#">who attends</a></li>
-      <li><a href="#">our clients</a></li>
-      <li><a href="#">careers</a></li>
-      <li><a href="#">more</a></li>
-      <li class="tickets"><button class="feature-button">get tickets</button></li>
+<nav class="nav-bar" ng-class="{ 'open': open }">
+    <ul class="main-menu">
+      <li class="element mobile-animation"><a href="#">about</a></li>
+      <li class="element mobile-animation"><a href="#">our shows</a></li>
+      <li class="element mobile-animation"><a href="#">who attends</a></li>
+      <li class="element mobile-animation"><a href="#">our clients</a></li>
+      <li class="element mobile-animation"><a href="#">careers</a></li>
+      <li class="element sub">
+        <div class="sub-menu-parent"><a class="more" href="#">more</a>
+          <div class="wrapper">
+            <ul class="sub-menu">
+              <li class="mobile-animation"><a href="#">press release</a></li>
+              <li class="mobile-animation"><a href="#">contact</a></li>
+              <li class="mobile-animation">
+                <a href="#">
+                  hr tech world <div class="bottom-message jun"><span>san fransisco</span><span> 14:15 june 2017</span></div>
+                </a>
+              </li>
+              <li class="mobile-animation">
+                <a href="#">
+                  hr tech world <div class="bottom-message oct"><span>amsterdam</span><span> 24:25 october 2017</span></div>
+                </a>
+              </li>
+              <li class="mobile-animation"><a href="#">hrn blog</a></li>
+              <li class="mobile-animation"><a href="#">hrn</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="element tickets mobile-animation"><button class="feature-button">get tickets</button></li>
     </ul>
+    <div class="mobil-menu" menu-animation>
+      <span class="line top"></span>
+      <span class="line mid"></span>
+      <span class="line bot"></span>
+    </div>
 </nav>
