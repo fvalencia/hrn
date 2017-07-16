@@ -23,6 +23,7 @@ I decided to set up the project using Angular, why? just as a test case to show 
 * How many time did I spend, an average of 20 - 22 Hours.
 * W3C Validations passed, just run the app and copy the final html.
 * I'm using directives for, carousel, scroll trigger event, navbar, and the nav animation on < tablet resolutions
+* Developed and Tested on Google Chrome v59, Mac OS Sierra.
 
 ### How to run it.  
 
